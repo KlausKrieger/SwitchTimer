@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="de.kriegergilde.switchtimer.MainActivity"
+    android:nestedScrollingEnabled="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arbeit"
+        android:id="@+id/buttonGreen"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#28781c" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trödeln"
+        android:id="@+id/buttonRed"
+        android:layout_below="@+id/buttonGreen"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp"
+        android:backgroundTint="#d31515" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textViewGreen"
+        android:layout_alignBottom="@+id/buttonGreen"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textViewRed"
+        android:layout_alignTop="@+id/buttonRed"
+        android:layout_alignEnd="@+id/textViewGreen" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/buttonBlue"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#59cdd3"
+        android:layout_below="@+id/buttonRed"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textViewBlue"
+        android:layout_alignTop="@+id/buttonBlue"
+        android:layout_alignStart="@+id/textViewRed" />
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progressBarArbeit"
+        android:layout_below="@+id/buttonBlue"
+        android:layout_marginTop="41dp"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="0"
+        android:visibility="visible"
+        android:layout_toStartOf="@+id/textViewBlue"
+        android:layout_alignEnd="@+id/textViewBlue"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:longClickable="false"
+        android:progressBackgroundTint="#ed3859"
+        android:clickable="false"
+        android:progressTint="#58b771" />
+
+</RelativeLayout>
